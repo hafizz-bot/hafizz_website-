@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="xfMzw21Q5LNft1_209UPmqmZyZBi1didCkQ3x5QH0dI" />
     <title>موقع حفيظ الشخصي</title>
+    
+    <!-- مكتبة الأيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         body {
             background-color: #000000;
@@ -35,10 +39,62 @@
             border: 4px solid #ffffff;
             margin-top: 20px;
         }
-        img.whatsapp {
-            width: 65px;
-            height: 65px;
+
+        /* تنسيق حاوية الأزرار لتكون في سطر واحد */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
             margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* الشكل الموحد لكل الأزرار */
+        .icon-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: #ffffff;
+            font-size: 30px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* تأثير الحركة عند إشارة الماوس */
+        .icon-btn:hover {
+            transform: translateY(-5px) scale(1.08);
+        }
+
+        /* ألوان المنصات */
+        .whatsapp {
+            background-color: #25D366;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+        }
+
+        .telegram {
+            background-color: #24A1DE;
+            box-shadow: 0 4px 12px rgba(36, 161, 222, 0.4);
+        }
+
+        .tiktok {
+            background-color: #000000;
+            border: 1px solid #333;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            box-shadow: 0 4px 12px rgba(220, 39, 67, 0.4);
+        }
+
+        .threads {
+            background-color: #101010;
+            border: 1px solid #444;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
         }
     </style>
 </head>
@@ -50,12 +106,33 @@
 
     <img class="profile" src="https://i.ibb.co/G4Wb5jPF/IMG-20260720-021621-hdr.jpg" alt="حفيظ">
 
-    <br>
-    <a href="https://wa.me/201150020818" target="_blank">
-        <img class="whatsapp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
+    <!-- الأيقونات كلها جنب بعض -->
+    <div class="social-icons">
+        <!-- الواتساب -->
+        <a href="https://wa.me/201150020818" target="_blank" class="icon-btn whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <!-- التليجرام -->
+        <a href="https://t.me/HAFIZZ2213" target="_blank" class="icon-btn telegram">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+
+        <!-- التيك توك -->
+        <a href="https://www.tiktok.com/@7afizzzz0?_r=1&_t=ZS-98f95XACF3x" target="_blank" class="icon-btn tiktok">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <!-- الانستجرام -->
+        <a href="https://www.instagram.com/hafizz_117?igsh=MTZ4cnVtMDd0bWI1Yw==" target="_blank" class="icon-btn instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <!-- ثيردز -->
+        <a href="https://www.threads.net/@hafizz_117" target="_blank" class="icon-btn threads">
+            <i class="fa-brands fa-threads"></i>
+        </a>
+    </div>
 
 </body>
 </html>
-
-         
