@@ -15,7 +15,7 @@
 
     <style>
         body {
-            /* خلفية متدرجة فخمة م بين الأسود والموف الغامق */
+            /* خلفية متدرجة فخمة بين الأسود والموف الغامق */
             background: linear-gradient(135deg, #0d0d11 0%, #1a1a2e 50%, #16213e 100%);
             background-attachment: fixed;
             text-align: center;
@@ -25,6 +25,15 @@
             min-height: 100vh;
             margin: 0;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content-wrap {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
         }
         
         /* تنسيق اسم الموقع الرئيسي */
@@ -38,7 +47,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* تنسيق النبذة التعرّفية اللي تحت الاسم بخط صغير */
+        /* تنسيق النبذة التعرّفية */
         .bio-subtitle {
             color: #00d2ff;
             font-size: 13px;
@@ -68,13 +77,13 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.6);
         }
 
-        /* تنسيق حاوية الأزرار لتكون في سطر واحد */
+        /* تنسيق حاوية الأزرار */
         .social-icons {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 15px;
-            margin-top: 30px;
+            margin-top: 25px;
             flex-wrap: wrap;
         }
 
@@ -92,78 +101,102 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* تأثير الحركة عند إشارة الماوس */
         .icon-btn:hover {
             transform: translateY(-5px) scale(1.08);
         }
 
         /* ألوان المنصات */
-        .telegram {
-            background-color: #24A1DE;
-            box-shadow: 0 4px 12px rgba(36, 161, 222, 0.4);
+        .telegram { background-color: #24A1DE; box-shadow: 0 4px 12px rgba(36, 161, 222, 0.4); }
+        .tiktok { background-color: #000000; border: 1px solid #333; box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); }
+        .whatsapp { background-color: #25D366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5); }
+        .instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); box-shadow: 0 4px 12px rgba(220, 39, 67, 0.4); }
+        .threads { background-color: #101010; border: 1px solid #444; box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15); }
+
+        /* تصميم قسم أهدافي الحالية */
+        .goals-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px 20px;
+            margin-top: 30px;
+            text-align: right;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
-        .tiktok {
-            background-color: #000000;
-            border: 1px solid #333;
-            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+        .goals-box h3 {
+            color: #00d2ff;
+            font-size: 15px;
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .whatsapp {
-            background-color: #25D366;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+        .goals-box ul {
+            margin: 0;
+            padding-right: 18px;
+            font-size: 13px;
+            color: #ddd;
+            line-height: 1.8;
         }
 
-        .instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            box-shadow: 0 4px 12px rgba(220, 39, 67, 0.4);
-        }
-
-        .threads {
-            background-color: #101010;
-            border: 1px solid #444;
-            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+        /* تصميم الفوتر (التذييل) */
+        footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #888;
+            letter-spacing: 0.5px;
+            padding-bottom: 10px;
         }
     </style>
 </head>
 <body>
 
-    <h1>Ahmed Hafiz | Official Website</h1>
-    <div class="bio-subtitle">Student • Learning Programming • Gym Enthusiast</div>
-    
-    <!-- الفاصل الكريتف -->
-    <div class="creative-divider">⚡ ─── ⋆⋅☆⋅⋆ ─── ⚡</div>
+    <div class="content-wrap">
+        <h1>Ahmed Hafiz | Official Website</h1>
+        <div class="bio-subtitle">Student • Learning Programming • Gym Enthusiast</div>
+        
+        <!-- الفاصل الكريتف -->
+        <div class="creative-divider">⚡ ─── ⋆⋅☆⋅⋆ ─── ⚡</div>
 
-    <!-- الصورة الشخصية -->
-    <img class="profile" src="https://i.ibb.co/wryWJjYh/IMG-20260612-WA0210.jpg" alt="احمد حفيظ">
+        <!-- الصورة الشخصية -->
+        <img class="profile" src="https://i.ibb.co/wryWJjYh/IMG-20260612-WA0210.jpg" alt="احمد حفيظ">
 
-    <!-- الأيقونات والواتساب بالمنتصف -->
-    <div class="social-icons">
-        <!-- التليجرام -->
-        <a href="https://t.me/HAFIZZ2213" target="_blank" class="icon-btn telegram">
-            <i class="fa-brands fa-telegram"></i>
-        </a>
+        <!-- الأيقونات والواتساب بالمنتصف -->
+        <div class="social-icons">
+            <a href="https://t.me/HAFIZZ2213" target="_blank" class="icon-btn telegram">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@7afizzzz0?_r=1&_t=ZS-98f95XACF3x" target="_blank" class="icon-btn tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://wa.me/201150020818" target="_blank" class="icon-btn whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/hafizz_117?igsh=MTZ4cnVtMDd0bWI1Yw==" target="_blank" class="icon-btn instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.threads.net/@hafizz_117" target="_blank" class="icon-btn threads">
+                <i class="fa-brands fa-threads"></i>
+            </a>
+        </div>
 
-        <!-- التيك توك -->
-        <a href="https://www.tiktok.com/@7afizzzz0?_r=1&_t=ZS-98f95XACF3x" target="_blank" class="icon-btn tiktok">
-            <i class="fa-brands fa-tiktok"></i>
-        </a>
-
-        <!-- الواتساب (في النص) -->
-        <a href="https://wa.me/201150020818" target="_blank" class="icon-btn whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-
-        <!-- الانستجرام -->
-        <a href="https://www.instagram.com/hafizz_117?igsh=MTZ4cnVtMDd0bWI1Yw==" target="_blank" class="icon-btn instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <!-- ثيردز -->
-        <a href="https://www.threads.net/@hafizz_117" target="_blank" class="icon-btn threads">
-            <i class="fa-brands fa-threads"></i>
-        </a>
+        <!-- قسم أهدافي الحالية -->
+        <div class="goals-box">
+            <h3><i class="fa-solid fa-bullseye"></i> أهدافي الحالية (Current Goals)</h3>
+            <ul>
+                <li>تعلم البرمجة وتطوير مهاراتي</li>
+                <li>بناء أول موقع احترافي لي</li>
+                <li>تحسين مستواي البدني في الجيم</li>
+            </ul>
+        </div>
     </div>
+
+    <!-- الفوتر -->
+    <footer>
+        Designed by Ahmed Hafiz &copy; 2026
+    </footer>
 
 </body>
 </html>
